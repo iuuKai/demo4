@@ -1,5 +1,8 @@
 {
 	"version": 2,
+	"buildCommand": "pnpm turbo run build",
+	"outputDirectory": ".",
+	"installCommand": "pnpm install",
 	"rewrites": [
 		{
 			"source": "/astro-ssg(/?)",
