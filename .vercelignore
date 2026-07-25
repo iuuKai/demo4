@@ -1,0 +1,13 @@
+node_modules
+**/node_modules
+.turbo
+**/.turbo
+.nuxt
+**/.nuxt
+.next
+**/.next
+.astro
+**/.astro
+apps/*/.cache
+apps/*/.vitepress/cache
+apps/*/.vuepress/cache
