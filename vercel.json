@@ -3,11 +3,6 @@
 	"buildCommand": "pnpm turbo run build",
 	"outputDirectory": ".",
 	"installCommand": "pnpm install",
-	"functions": {
-		"apps/express-api/src/app.js": {
-			"runtime": "nodejs20.x"
-		}
-	},
 	"rewrites": [
 		{
 			"source": "/astro-ssg(/?)",
