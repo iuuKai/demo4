@@ -1,18 +1,8 @@
 {
 	"version": 2,
-	"builds": [
-		{
-			"src": "package.json",
-			"use": "@vercel/static-build",
-			"config": {
-				"distDir": "."
-			}
-		},
-		{
-			"src": "apps/express-api/src/app.js",
-			"use": "@vercel/node"
-		}
-	],
+	"buildCommand": "pnpm turbo run build",
+	"outputDirectory": ".",
+	"installCommand": "pnpm install",
 	"rewrites": [
 		{
 			"source": "/astro-ssg(/?)",
@@ -99,16 +89,12 @@
 			"destination": "/apps/webpack-ejs-mpa/dist/:path*"
 		},
 		{
-			"source": "/api/:path*",
-			"destination": "/apps/express-api/src/app.js"
-		},
-		{
 			"source": "/(js|css|images)/(.*)",
 			"destination": "/apps/express-api/public/$1/$2"
 		},
 		{
 			"source": "/:path(.*)",
-			"destination": "/apps/express-api/src/app.js"
+			"destination": "/api/_express/:path"
 		}
 	]
 }
