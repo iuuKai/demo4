@@ -4,6 +4,7 @@
 		"cmd": "pnpm turbo run build",
 		"outputDirectory": "."
 	},
+	"installCommand": "pnpm install",
 	"functions": {
 		"apps/express-api/src/app.js": {
 			"runtime": "@vercel/node"
