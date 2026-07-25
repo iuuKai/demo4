@@ -1,12 +1,11 @@
 {
 	"version": 2,
-	"$schema": "https://openapi.vercel.sh/vercel.json",
 	"buildCommand": "pnpm turbo run build",
 	"outputDirectory": ".",
 	"installCommand": "pnpm install",
 	"functions": {
 		"apps/express-api/src/app.js": {
-			"runtime": "@vercel/node"
+			"runtime": "nodejs20.x"
 		}
 	},
 	"rewrites": [
