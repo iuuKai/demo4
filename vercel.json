@@ -3,11 +3,6 @@
 	"buildCommand": "pnpm turbo run build",
 	"outputDirectory": ".",
 	"installCommand": "pnpm install",
-	"functions": {
-		"api/[...path].js": {
-			"maxDuration": 60
-		}
-	},
 	"rewrites": [
 		{
 			"source": "/astro-ssg(/?)",
@@ -98,8 +93,8 @@
 			"destination": "/apps/express-api/public/$1/$2"
 		},
 		{
-			"source": "/:path((?!api/).*)",
-			"destination": "/api/:path"
+			"source": "/:path(.*)",
+			"destination": "/api/_site/:path"
 		}
 	]
 }
