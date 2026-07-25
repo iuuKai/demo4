@@ -4,7 +4,7 @@
 	"outputDirectory": ".",
 	"installCommand": "pnpm install",
 	"functions": {
-		"apps/express-api/src/app.js": {
+		"api/[...path].js": {
 			"maxDuration": 60
 		}
 	},
@@ -94,16 +94,12 @@
 			"destination": "/apps/webpack-ejs-mpa/dist/:path*"
 		},
 		{
-			"source": "/api/:path*",
-			"destination": "/apps/express-api/src/app.js"
-		},
-		{
 			"source": "/(js|css|images)/(.*)",
 			"destination": "/apps/express-api/public/$1/$2"
 		},
 		{
-			"source": "/:path(.*)",
-			"destination": "/apps/express-api/src/app.js"
+			"source": "/:path((?!api/).*)",
+			"destination": "/api/:path"
 		}
 	]
 }
