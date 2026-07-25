@@ -1,8 +1,18 @@
 {
 	"version": 2,
-	"buildCommand": "pnpm turbo run build",
-	"outputDirectory": ".",
-	"installCommand": "pnpm install",
+	"builds": [
+		{
+			"src": "package.json",
+			"use": "@vercel/static-build",
+			"config": {
+				"distDir": "."
+			}
+		},
+		{
+			"src": "apps/express-api/src/app.js",
+			"use": "@vercel/node"
+		}
+	],
 	"rewrites": [
 		{
 			"source": "/astro-ssg(/?)",
