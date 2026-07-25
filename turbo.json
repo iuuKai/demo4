@@ -1,0 +1,24 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"tasks": {
+		"build": {
+			"dependsOn": [],
+			"outputs": [
+				"dist/**",
+				"public/**",
+				"out/**",
+				".output/**",
+				"docs/.vitepress/dist/**",
+				"docs/.vuepress/dist/**"
+			],
+			"cache": true
+		},
+		"dev": {
+			"persistent": true,
+			"cache": false
+		},
+		"lint": {
+			"cache": true
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "vitepress-ssg",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"vitepress": "^1.6.4"
+	},
+	"scripts": {
+		"dev": "vitepress dev docs --port 1005",
+		"build": "vitepress build docs",
+		"docs:dev": "vitepress dev docs --port 1005",
+		"docs:build": "vitepress build docs",
+		"docs:preview": "vitepress preview docs",
+		"vercel-build": "vitepress build docs"
+	}
+}

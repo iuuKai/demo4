@@ -1,0 +1,36 @@
+{
+	"name": "vercel-internal-rewrite-monorepo-template",
+	"version": "1.0.0",
+	"private": false,
+	"description": "Open-source monorepo template containing React, Vue, Nuxt(SSG), Next(SSG), VitePress, VuePress and Express API. Implements route distribution via customized vercel.json builds & internal-path rewrites. Single Vercel deployment serves multiple sub-projects on one domain, not compatible with SSR workloads.",
+	"license": "MIT",
+	"packageManager": "pnpm@11.4.0",
+	"keywords": [
+		"monorepo-template",
+		"monorepo",
+		"web-template",
+		"template",
+		"internal-routing",
+		"multi-app",
+		"multi-site",
+		"static-site",
+		"dist",
+		"pnpm",
+		"mpa",
+		"spa",
+		"ssg",
+		"vercel",
+		"vercel-builds",
+		"vercel-rewrites",
+		"vercel-deployment",
+		"turbo"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint"
+	},
+	"devDependencies": {
+		"turbo": "^2.10.6"
+	}
+}
