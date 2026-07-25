@@ -1,9 +1,8 @@
 {
 	"version": 2,
-	"build": {
-		"buildCommand": "pnpm turbo run build",
-		"outputDirectory": "."
-	},
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"buildCommand": "pnpm turbo run build",
+	"outputDirectory": ".",
 	"installCommand": "pnpm install",
 	"functions": {
 		"apps/express-api/src/app.js": {
